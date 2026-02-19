@@ -1,5 +1,5 @@
-def sum(a,b) -> int:
-    return int(a) + int(b)
+def sum(a,b) -> float:
+    return float(a) + float(b)
 
 
 if __name__ == "__main__":
