@@ -38,13 +38,13 @@ jobs:
       run: |
          python -m pytest --cov=. --cov-report=term
 
-    #- name: Generar archivo de build
-     # run: |
-      #  mkdir build
-       # cp calc.py build/
+    - name: Generar archivo de build
+      run: |
+        mkdir build
+        cp calc.py build/
 
-   # - name: Subir artefacto
-    #  uses: actions/upload-artifact@v4
-     # with:
-      #  name: proyecto-build
-       # path: build/
+    - name: Subir artefacto
+      uses: actions/upload-artifact@v4
+      with:
+        name: proyecto-build
+        path: build/
