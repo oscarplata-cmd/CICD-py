@@ -11,3 +11,6 @@ def test_sum_mixed():
 
 def test_sum_float():
     assert sum(1.2, 1.5) == 2.7
+
+def test_sum_float():
+    assert sum(1.2, -1.2) == 0
