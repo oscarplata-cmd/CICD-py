@@ -39,7 +39,7 @@ jobs:
         
     - name: Ejecutar tests con coverage y html
       run: |
-         python -m pytest -v  --cov=. --cov-report=term --html=report.html
+         python -m pytest -v  --cov=. --cov-report=html --html=report.html
 
     - name: Generar archivo de build
       run: |
