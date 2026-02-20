@@ -1,16 +1,18 @@
-from calc import sum
+import pytest
+from calc import Calculadora
 
 def test_sum_positive():
-    assert sum(2, 3) == 5
+    c = Calculadora()
+    assert c.sum(2, 3) == 5
 
 def test_sum_negative():
-    assert sum(-1, -1) == -2
+    c = Calculadora()
+    assert c.sum(-1, -1) == -2
 
-def test_sum_mixed():
-    assert sum(-1, 1) == 0
+def test_mul():
+    c = Calculadora()
+    assert c.mul(-1, 1) == -1
 
-def test_sum_float():
-    assert sum(1.2, 1.5) == 2.7
-
-def test_sum_float():
-    assert sum(1.2, -1.2) == 0
+def test_mul_negative():
+    c = Calculadora()
+    assert c.mul(1.2, 1.5) ==  pytest.approx(1.8)

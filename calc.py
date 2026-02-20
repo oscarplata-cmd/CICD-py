@@ -1,8 +1,11 @@
 import os
+class Calculadora:
 
-def sum(a,b) -> float:
-    return float(a) + float(b)
+    def sum(self, a: float,b: float) -> float:
+        return float(a) + float(b)
+    
+    def mul(self, a: float,b: float) -> float:
+        return float(a) * float(b)
 
 
-if __name__ == "__main__":
-    print (sum(1.2, 1.5))
+print(Calculadora().mul(1,2))
