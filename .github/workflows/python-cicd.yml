@@ -46,14 +46,15 @@ jobs:
         mkdir build
         cp calc.py build/
 
-    - name: Subir artefacto Coverage
-      uses: actions/upload-artifact@v4
-      with:
-        name: reporte-coverage
-        path: htmlcov/
+    - name: Crear carpeta de artefacto final
+      run: |
+        mkdir artifact
+        cp -r htmlcov artifact/
+        mkdir artifact/build
+        cp calc.py artifact/build/
 
-    - name: Subir artefacto
+    - name: Subir artefacto final
       uses: actions/upload-artifact@v4
       with:
-        name: proyecto-build
-        path: build/
+        name: entrega-final
+        path: artifact/
