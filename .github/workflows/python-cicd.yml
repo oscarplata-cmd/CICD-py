@@ -37,9 +37,9 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
-    - name: Ejecutar tests con coverage
+    - name: Ejecutar tests con coverage y html
       run: |
-         python -m pytest --cov=. --cov-report=html
+         python -m pytest -v  --cov=. --cov-report=term --html=report.html
 
     - name: Generar archivo de build
       run: |
@@ -52,6 +52,9 @@ jobs:
         cp -r htmlcov artifact/
         mkdir artifact/build
         cp calc.py artifact/build/
+        mkdir artifact/report
+        cp -r assets artifact/report
+        cp -r report.html artifact/report
 
     - name: Subir artefacto final
       uses: actions/upload-artifact@v4
