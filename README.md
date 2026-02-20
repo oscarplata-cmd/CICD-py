@@ -1,1 +1,1 @@
-![CI](https://github.com/TU_USUARIO/TU_REPO/actions/workflows/python-ci.yml/badge.svg)
+![CI](https://github.com/oscarplata-cmd/CICD-py/actions/workflows/python-cicd.yml/badge.svg)
