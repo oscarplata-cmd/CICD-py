@@ -1,0 +1,1 @@
+![CI](https://github.com/TU_USUARIO/TU_REPO/actions/workflows/python-ci.yml/badge.svg)
